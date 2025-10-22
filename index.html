@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Theme managment</title>
+	
+	<!-- Importat peaces for the theme to work -->
+	<script src="https://cdn.jsdelivr.net/gh/feraxjs/thselector@v0.1.0/src/core.js"></script>
+	
+	<!-- Optional peaces for the theme to work -->
+	<script src="https://cdn.jsdelivr.net/gh/feraxjs/thselector@v0.1.0/src/components/dropdown.js" defer></script> 
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/feraxjs/themes@v0.1.0/catppuccin/light/latte.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/feraxjs/themes@v0.1.0/catppuccin/dark/mocha.css">
+	<!-- Close -->
+	
+	<link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <section>
+    <h1>Theme <em>demo</em> <select id="fth-select" class="theme"></select></h1>
+    </section>
+    
+    <section>
+        <div class="card normal">
+            <h2>Common</h2>
+            <p>This is a card component that adapts to the selected theme.</p>
+        </div>
+        <div class="card error">
+            <h2>Error</h2>
+            <p>This is a card component that adapts to the selected theme.</p>
+        </div>
+        <div class="card warning">
+            <h2>Warning</h2>
+            <p>This is a card component that adapts to the selected theme.</p>
+        </div>
+        <div class="card success">
+            <h2>Success</h2>
+            <p>This is a card component that adapts to the selected theme.</p>
+        </div>
+        <div class="card info">
+            <h2>Information</h2>
+            <p>This is a card component that adapts to the selected theme.</p>
+        </div>
+    </section>
+    
+    <section>
+        <div class="card normal text">
+            <p class="txt-error">Error</p>
+            <p class="txt-warning">Warning</p>
+            <p class="txt-success">Success</p>
+            <p class="txt-info">info</p>
+        </div>
+        
+        <div class="card normal text">
+            <p class="on-error">Error</p>
+            <p class="on-warning">Warning</p>
+            <p class="on-success">Success</p>
+            <p class="on-info">info</p>
+        </div>
+    </section>
+</body>
+</html>
