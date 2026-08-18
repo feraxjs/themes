@@ -10,54 +10,96 @@
 	
 	<!-- Optional peaces for the theme to work -->
 	<script src="https://cdn.jsdelivr.net/gh/feraxjs/thselector@v0.1.0/src/components/dropdown.js" defer></script> 
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/feraxjs/themes@v0.1.0/catppuccin/light/latte.css">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/feraxjs/themes@v0.1.0/catppuccin/dark/mocha.css">
+	<link rel="stylesheet" href="./catppuccin/light/latte.css">
+	<link rel="stylesheet" href="./catppuccin/dark/mocha.css">
 	<!-- Close -->
 	
 	<link rel="stylesheet" href="index.css">
+	<script src="index.js"></script>
 </head>
 <body>
-    <section>
-    <h1>Theme <em>demo</em> <select id="fth-select" class="theme"></select></h1>
-    </section>
-    
-    <section>
-        <div class="card normal">
-            <h2>Common</h2>
-            <p>This is a card component that adapts to the selected theme.</p>
-        </div>
-        <div class="card error">
-            <h2>Error</h2>
-            <p>This is a card component that adapts to the selected theme.</p>
-        </div>
-        <div class="card warning">
-            <h2>Warning</h2>
-            <p>This is a card component that adapts to the selected theme.</p>
-        </div>
-        <div class="card success">
-            <h2>Success</h2>
-            <p>This is a card component that adapts to the selected theme.</p>
-        </div>
-        <div class="card info">
-            <h2>Information</h2>
-            <p>This is a card component that adapts to the selected theme.</p>
-        </div>
-    </section>
-    
-    <section>
-        <div class="card normal text">
-            <p class="txt-error">Error</p>
-            <p class="txt-warning">Warning</p>
-            <p class="txt-success">Success</p>
-            <p class="txt-info">info</p>
+    <section style="display: flex;">
+        <div class="colors-container">
+        <section class="colors">
+            <div class="section-divider">global</div>
+            <div class="divider">background</div>
+            <color-picker color="--bg-dark"></color-picker>
+            <color-picker color="--bg-muted"></color-picker>
+            <color-picker color="--bg-light"></color-picker>
+            <div class="divider">foreground</div>
+            <color-picker color="--fg-brigth"></color-picker>
+            <color-picker color="--fg-muted"></color-picker>
+            <color-picker color="--fg-dimmer"></color-picker>
+            <div class="divider">border</div>
+            <color-picker color="--bd-light"></color-picker>
+            <color-picker color="--bd-muted"></color-picker>
+            <color-picker color="--bd-dark"></color-picker>
+            <div class="section-divider">semantic</div>
+            <div class="divider">background</div>
+            <color-picker color="--sm-bg-error"></color-picker>
+            <color-picker color="--sm-bg-warning"></color-picker>
+            <color-picker color="--sm-bg-success"></color-picker>
+            <color-picker color="--sm-bg-info"></color-picker>
+            <div class="divider">foreground</div>
+            <color-picker color="--sm-fg-error"></color-picker>
+            <color-picker color="--sm-fg-warning"></color-picker>
+            <color-picker color="--sm-fg-success"></color-picker>
+            <color-picker color="--sm-fg-info"></color-picker>
+            <div class="divider">on background</div>
+            <color-picker color="--sm-fg-on-error"></color-picker>
+            <color-picker color="--sm-fg-on-warning"></color-picker>
+            <color-picker color="--sm-fg-on-success"></color-picker>
+            <color-picker color="--sm-fg-on-info"></color-picker>
+            <div class="divider">border</div>
+            <color-picker color="--sm-bd-error"></color-picker>
+            <color-picker color="--sm-bd-warning"></color-picker>
+            <color-picker color="--sm-bd-success"></color-picker>
+            <color-picker color="--sm-bd-info"></color-picker>
+            <div class="spacer"></div>
+        </section>
         </div>
         
-        <div class="card normal text">
-            <p class="on-error">Error</p>
-            <p class="on-warning">Warning</p>
-            <p class="on-success">Success</p>
-            <p class="on-info">info</p>
-        </div>
+        <section class="rigth">
+            <section>
+                <h1>Theme <em>demo</em> <select id="fth-select" class="theme"></select></h1>
+            </section>
+            <div class="card normal">
+                <h2>Common</h2>
+                <p>This is a card component that adapts to the selected theme.</p>
+            </div>
+            <div class="card error">
+                <h2>Error</h2>
+                <p>This is a card component that adapts to the selected theme.</p>
+            </div>
+            <div class="card warning">
+                <h2>Warning</h2>
+                <p>This is a card component that adapts to the selected theme.</p>
+            </div>
+            <div class="card success">
+                <h2>Success</h2>
+                <p>This is a card component that adapts to the selected theme.</p>
+            </div>
+            <div class="card info">
+                <h2>Information</h2>
+                <p>This is a card component that adapts to the selected theme.</p>
+            </div>
+            
+            <section>
+                <div class="card normal text">
+                    <p class="txt-error">Error</p>
+                    <p class="txt-warning">Warning</p>
+                    <p class="txt-success">Success</p>
+                    <p class="txt-info">info</p>
+                </div>
+                
+                <div class="card normal text">
+                    <p class="on-error">Error</p>
+                    <p class="on-warning">Warning</p>
+                    <p class="on-success">Success</p>
+                    <p class="on-info">info</p>
+                </div>
+            </section>
+        </section>
     </section>
 </body>
 </html>

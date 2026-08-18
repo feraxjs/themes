@@ -96,21 +96,21 @@
   
   /* == Semantic == */
   /* background */
-  --bg-lightness-factor: 34%;
+  --bg-lightness-factor: 40%;
   --sm-bg-error:      oklch(from var(--ctp-red)    var(--bg-lightness-factor) c h);
   --sm-bg-warning:    oklch(from var(--ctp-yellow) var(--bg-lightness-factor) c h);
   --sm-bg-success:    oklch(from var(--ctp-green)  var(--bg-lightness-factor) c h);
   --sm-bg-info:       oklch(from var(--ctp-sky)    var(--bg-lightness-factor) c h);
   
   /* Foreground */
-  --fg-lightness-factor: 88%;
+  --fg-lightness-factor: 80%;
   --sm-fg-error:      oklch(from var(--ctp-red)    var(--fg-lightness-factor) c h);
   --sm-fg-warning:    oklch(from var(--ctp-yellow) var(--fg-lightness-factor) c h);
   --sm-fg-success:    oklch(from var(--ctp-green)  var(--fg-lightness-factor) c h);
   --sm-fg-info:       oklch(from var(--ctp-sky)    var(--fg-lightness-factor) c h);
   
   /* OnBackground */
-  --onbg-lightness-factor: 85%;
+  --onbg-lightness-factor: 100%;
   --sm-fg-on-error:   oklch(from var(--ctp-red)    var(--onbg-lightness-factor) c h);
   --sm-fg-on-warning: oklch(from var(--ctp-yellow) var(--onbg-lightness-factor) c h);
   --sm-fg-on-success: oklch(from var(--ctp-green)  var(--onbg-lightness-factor) c h);
