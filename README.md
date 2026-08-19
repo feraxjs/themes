@@ -7,48 +7,9 @@ My purpose is not to discover the world, but have a self-standar for
 my own desings, if you would like to contribute, or have an opinion 
 I am open to discuss.
 
-~~~
-/* === Theme scheme  ==== */
-/* Background */
---bg-dark: 
---bg-muted: 
---bg-light: 
-
-/* Foreground */
---fg-brigth: 
---fg-muted: 
---fg-dimmer: 
-
-/* Border */
---bd-light:
---bd-muted:
---bd-dark:
-
-/* == Semantic == */
-/* background */
---sm-bg-error: 
---sm-bg-warning: 
---sm-bg-success: 
---sm-bg-info: 
-
-/* Foreground */
---sm-fg-error: 
---sm-fg-warning: 
---sm-fg-success: 
---sm-fg-info: 
-
-/* OnBackground */
---sm-fg-on-error: 
---sm-fg-on-warning: 
---sm-fg-on-success: 
---sm-fg-on-info: 
-
-/* Border */
---sm-bd-error: 
---sm-bd-warning: 
---sm-bd-success: 
---sm-bd-info: 
-~~~
+> [!note]
+> for the full breakdown of the fields provided by the theme, 
+> enter to [feraxjs/themes](https://feraxjs.github.io/themes/)
 
 ## why _OKLCH_?
 
