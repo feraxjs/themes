@@ -45,25 +45,26 @@ body {
     
     & .divider {
         position: sticky;
-        top: 15px;
+        top: 22px;
         
         display: flex;
         align-items: center;
         text-align: center;
+        height: 24px;
         width: 100%;
         gap: .5rem;
-        color: var(--text-muted);
+        color: var(--fg-dimmer);
         background-color: var(--bg-light);
 
         z-index: 2;
         
         /*&::before,*/
-        &::after {
+        /*&::after {
             content: "";
             flex: 1;
             height: 1px;
             background-color: var(--bd-muted);
-        }
+        }*/
     }
     & .section-divider {
         position: sticky;
@@ -72,11 +73,11 @@ body {
         display: flex;
         align-items: center;
         text-align: center;
-        height: 16px;
+        height: 24px;
         width: 100%;
         gap: .5rem;
         
-        color: var(--text-muted);
+        color: var(--fg-brigth);
         background-color: var(--bg-light);
 
         z-index: 3;
@@ -99,13 +100,15 @@ color-picker {
     display: inline-flex;
     min-width: max-content;
     
-    border: var(--bd-muted) solid 1px;
-    border-radius: 999px;
+    /*border: var(--bd-muted) solid 1px;*/
+    border-radius: 8px;
     
     padding: 6px 16px 6px 6px;
     transition: unset;
     
     position: relative;
+    justify-content: start;
+    justify-items: center;
 
     &[copied]::after {
         position: absolute;
@@ -136,6 +139,8 @@ color-picker {
         width: 20px;
         border-radius: 50%;
         margin-right: 8px;
+        
+        border: solid var(--bd-dark) 1px;
     }
     
     & .name {
