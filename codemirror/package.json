@@ -1,0 +1,48 @@
+{
+    "name": "@feraxjs/themes-codemirror",
+    "private": false,
+    "type": "module",
+    "version": "0.0.2",
+    "author": "feraxhp",
+    "license": "MIT",
+    "main": "dist/themes-codemirror.js",
+    "types": "dist/themes-codemirror.d.ts",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/feraxjs/themes.git"
+    },
+    "bugs": {
+        "url": "https://github.com/feraxjs/themes/issues"
+    },
+    "homepage": "https://github.com/feraxjs/themes/",
+    "files": [
+        "dist",
+        "README.md"
+    ],
+    "keywords": [
+        "theme",
+        "codemirror",
+        "dynamic"
+    ],
+    "dependencies": {
+        "@codemirror/language": "^6.12.4",
+        "@codemirror/state": "^6.7.1",
+        "@codemirror/view": "^6.43.9",
+        "@lezer/highlight": "^1.2.3"
+    },
+    "devDependencies": {
+        "rolldown": "^1.2.4",
+        "rolldown-plugin-dts": "^0.28.2"
+    },
+    "peerDependencies": {
+        "typescript": "^5.9.3"
+    },
+    "scripts": {
+        "build": "rm -fr dist && rolldown -c",
+        "build:watch": "rm -fr dist && rolldown -cw",
+        "build:prod": "rm -fr dist && NODE_ENV=production rolldown -c"
+    },
+    "publishConfig": {
+        "access": "public"
+    }
+}
