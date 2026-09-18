@@ -18,19 +18,20 @@ const spec = {
   },
 
   "&.cm-focused > .cm-scroller > .cm-selectionLayer .cm-selectionBackground, .cm-selectionBackground, .cm-content ::selection": {
-    // backgroundColor: `${colors.overlay2.hex}40`,
+    backgroundColor: `var(--ge-selection)`,
   },
 
   // ".cm-panels": {
   //   backgroundColor: "var(--ce-keyword)",
   //   color: "var(--fg-brigth)",
   // },
-  // ".cm-panels.cm-panels-top": {
-  //   borderBottom: `1px solid ${colors.overlay0.hex}`,
-  // },
-  // ".cm-panels.cm-panels-bottom": {
-  //   borderTop: `1px solid ${colors.overlay0.hex}`,
-  // },
+  
+  ".cm-panels.cm-panels-top": {
+    borderBottom: `1px solid var(--bd-dark)`,
+  },
+  ".cm-panels.cm-panels-bottom": {
+    borderTop: `1px solid var(--bd-dark)`,
+  },
 
   ".cm-searchMatch": {
     backgroundColor: `hls(from var(--search-bg) h s l / .59)`,
@@ -46,7 +47,7 @@ const spec = {
   },
 
   "&.cm-focused .cm-matchingBracket, &.cm-focused .cm-nonmatchingBracket": {
-    // backgroundColor: `${colors.surface2.hex}47`,
+    backgroundColor: `hls(from var(--search-active-bg) h s l / .59)`,
     color: "var(--fg-brigth)",
   },
 
@@ -71,24 +72,25 @@ const spec = {
   //   color: colors.overlay1.hex,
   // },
 
-  // ".cm-tooltip": {
-  //   border: "none",
-  //   backgroundColor: colors.surface0.hex,
-  // },
+  ".cm-tooltip": {
+    color: `var(--tooltip-fg)`,
+    border: "2px var(--tooltip-bd) solid",
+    backgroundColor: `var(--tooltip-bg)`,
+  },
   // ".cm-tooltip .cm-tooltip-arrow:before": {
-  //   borderTopColor: "transparent",
-  //   borderBottomColor: "transparent",
+  //   borderTopColor: "red",
+  //   borderBottomColor: "red",
   // },
   // ".cm-tooltip .cm-tooltip-arrow:after": {
-  //   borderTopColor: colors.surface0.hex,
-  //   borderBottomColor: colors.surface0.hex,
+  //   borderTopColor: "green",
+  //   borderBottomColor: "green",
   // },
-  // ".cm-tooltip-autocomplete": {
-  //   "& > ul > li[aria-selected]": {
-  //     backgroundColor: colors.surface1.hex,
-  //     color: colors.text.hex,
-  //   },
-  // },
+  ".cm-tooltip-autocomplete": {
+    "& > ul > li[aria-selected]": {
+      backgroundColor: "var(--tooltip-active-bg)",
+      color: "var(--tooltip-active-fg)",
+    },
+  },
 }
 const highlightStyle = HighlightStyle.define([
   { tag: t.keyword, color: "var(--ce-keyword)" },
@@ -121,9 +123,9 @@ const highlightStyle = HighlightStyle.define([
     tag: [t.meta, t.punctuation, t.separator, t.comment],
     color: "var(--ce-braces)",
   },
-  // { tag: t.strong, fontWeight: "bold" },
-  // { tag: t.emphasis, fontStyle: "italic" },
-  // { tag: t.strikethrough, textDecoration: "line-through" },
+  { tag: t.strong, fontWeight: "bold" },
+  { tag: t.emphasis, fontStyle: "italic" },
+  { tag: t.strikethrough, textDecoration: "line-through" },
   { tag: t.link, color: "var(--ge-normal-links)" /*, textDecoration: "underline" */ },
   // { tag: t.heading, fontWeight: "bold", color: colors.blue.hex },
   {
@@ -139,6 +141,6 @@ const highlightStyle = HighlightStyle.define([
 ]);
 
 export const dynamicTheme: Extension[] = [
-  EditorView.baseTheme(spec),
+  EditorView.theme(spec),
   syntaxHighlighting(highlightStyle)
 ];

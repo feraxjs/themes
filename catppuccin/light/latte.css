@@ -31,6 +31,9 @@
   --bg-dark: var(--ctp-crust);
   --bg-muted: var(--ctp-mantle);
   --bg-light: var(--ctp-base);
+  --bg-surface0: var(--ctp-surface0);
+  --bg-surface1: var(--ctp-surface1);
+  --bg-surface2: var(--ctp-surface2);
   
   /* Foreground */
   --fg-brigth: var(--ctp-text);
@@ -117,6 +120,7 @@
   /* general */
   --ge-cursor: var(--ctp-rosewater);
   --ge-cursor-line: lch( from var(--ctp-text) l c h / .1);
+  --ge-selection: lch( from var(--ctp-overlay2) l c h / .2);
   --ge-line-numbers: var(--ctp-overlay1);
   --ge-active-line-number: var(--bc-lavender);
   --ge-normal-links: var(--bc-blue);
@@ -128,4 +132,12 @@
   --search-bg: var(--ctp-teal);
   --search-active-fg: var(--ctp-text);
   --search-active-bg: var(--ctp-red);
+
+  /* Tooltip */
+  --tooltip-bg: var(--bg-surface0);
+  --tooltip-fg: var(--fg-brigth);
+  --tooltip-bd: transparent;
+  --tooltip-active-bg: var(--bg-surface1);
+  --tooltip-active-fg: var(--fg-muted);
+  
 }
