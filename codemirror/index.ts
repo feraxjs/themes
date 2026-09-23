@@ -1,8 +1,10 @@
 import { EditorView } from "@codemirror/view";
 import { HighlightStyle, syntaxHighlighting } from "@codemirror/language";
 import { tags as t } from "@lezer/highlight";
-import type { Extension } from "@codemirror/state";
+import { Compartment, type Extension } from "@codemirror/state";
 
+
+const themeConfig = new Compartment();
 
 const spec = {
   "&": {
@@ -140,7 +142,25 @@ const highlightStyle = HighlightStyle.define([
   { tag: t.invalid, color: "var(--sm-fg-error)" },
 ]);
 
-export const dynamicTheme: Extension[] = [
-  EditorView.theme(spec),
-  syntaxHighlighting(highlightStyle)
-];
+
+export const dynamicTheme = (): Extension[] => {
+  const current = (document.documentElement.getAttribute('theme') ?? "ligth") === "dark";
+  
+  return [  
+    themeConfig.of(EditorView.theme(spec, { dark: current })),
+    syntaxHighlighting(highlightStyle)
+  ];
+}
+export const reconfig = (view: EditorView) => {
+  const callback = (e: Event) => {
+    const current = (document.documentElement.getAttribute('theme') ?? "ligth") === "dark";
+    
+    view.dispatch({
+      // @ts-ignore
+      effects: themeConfig.reconfigure(EditorView.theme(spec, { dark: current }))
+    })
+  }
+  document.addEventListener('th-changed', callback);
+  
+  return () => document.removeEventListener('th-changed', callback);
+}
