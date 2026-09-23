@@ -2,7 +2,7 @@
     "name": "@feraxjs/themes-codemirror",
     "private": false,
     "type": "module",
-    "version": "0.0.3",
+    "version": "0.1.0",
     "author": "feraxhp",
     "license": "MIT",
     "main": "dist/themes-codemirror.js",
