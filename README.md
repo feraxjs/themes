@@ -14,3 +14,26 @@ I am open to discuss.
 ## why _OKLCH_?
 
 I think it looks better.
+
+---
+## Codemirror pluggin
+
+The codemirror pluggin is just a helper/_wrapper_ to manage the themes dynamicly on a 
+full compatible maner with this API.
+
+**fast and simple use.**
+~~~js
+import { EditorView, minimalSetup } from "codemirror";
+import { dynamicTheme, reconfig } from "@feraxjs/themes-codemirror";
+
+const view = new EditorView({
+  doc: initialContent,
+  extensions: [
+    minimalSetup,
+    dynamicTheme(),
+  ],
+  parent: document.querySelector(".editor")!,
+});
+
+const unsubscribe = reconfig(view);
+~~~
